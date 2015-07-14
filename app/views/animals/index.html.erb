@@ -1,0 +1,11 @@
+<h1>See the animals in <%= @zoo.name %></h1>
+<%  @zoo.animals.each do |animal|%>
+<p><%= animal.name %></p>
+<p><%= animal.age %></p>
+<p><%= animal.species %></p>
+<%= link_to "More information", animal_path(animal) %>
+<%= link_to "Edit Animal", edit_animal_path(animal) %>
+<% end %>
+
+<%= link_to "Add Animals", new_zoo_animal_path(@zoo) %>
+

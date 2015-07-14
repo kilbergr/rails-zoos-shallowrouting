@@ -1,0 +1,5 @@
+<h1><%= @animal.name %></h1>
+<p><%= @animal.name %> is an <%= @animal.age %> year old <%= @animal.species %>.</p>
+
+<%= link_to "Animals at #{@animal.zoo.name}", zoo_animals_path(@animal.zoo) %>
+<%= link_to "Kill Animal", animal_path(@animal), method: :delete, data: {confirm: "Are you sure you want to murder a poor innocent creature?"}%>

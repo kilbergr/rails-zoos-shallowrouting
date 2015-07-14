@@ -1,0 +1,8 @@
+<h1>Zoo Spotlight</h1>
+
+<% @zoo.attributes.each do|key, value| %>
+<p>	<%= key %>: <%= value %></p>
+<% end %>
+<%= link_to "Add Animal", new_zoo_animal_path(@zoo) %>
+<%= link_to "Edit Zoo Information", edit_zoo_path(@zoo) %>
+<%= link_to "Delete #{@zoo.name}", zoo_path(@zoo), method: :delete, data: {confirm: "Are you sure you'd like to delete this zoo?"} %>

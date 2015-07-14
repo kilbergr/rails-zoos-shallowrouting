@@ -1,0 +1,7 @@
+<h1>All Zoos</h1>
+<%= link_to "Add Zoo", new_zoo_path %>
+<% @zoos.each do |zoo|%>
+	<p><%=link_to zoo.name, zoo_path(zoo) %></p>
+	<p><%= zoo.location %></p>
+
+<% end %>

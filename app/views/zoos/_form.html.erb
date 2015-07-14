@@ -1,0 +1,15 @@
+<% if @zoo.errors.any? %>
+ 	<% @zoo.errors.full_messages.each {|error|%>
+	 	<p style="color: red">
+	 		<%= error %>
+	 	</p>
+ 	<% } %>
+ <% end %>
+
+<%= form_for @zoo do |f| %>
+		<%= f.label "Name" %>
+		<%= f.text_field :name, autofocus: true %><br/>
+    <%= f.label "Location" %>
+    <%= f.text_field :location%><br />
+    <%= f.submit%>
+<% end %>
